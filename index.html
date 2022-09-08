@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const arr=["alma", "albalı", "alça"];
+const arr1=["alim", "müəllim", "şagirdə"]
+function func(arr) {
+    let i = 0;
+    console.log(arr)
+   if (arr.length==0) {
+        return "";
+    }
+    
+    while (true) {
+        const char = arr[0][i] || "";
+        const match = arr.every(str => str[i] === char);
+        if (match) {
+            i += 1;
+        } else {
+            break;
+        }
+    }
+    return arr[0].slice(0, i) ? arr[0].slice(0, i):"";
+};
+console.log(func(arr1))
+    </script>
+</body>
+</html>
